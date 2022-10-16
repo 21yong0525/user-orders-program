@@ -59,10 +59,10 @@ DB에 연결하여 저장된 매장에 상품을 주문 할 수 있는 프로그
 ![image](https://user-images.githubusercontent.com/115531869/196035829-9639edf1-46d4-4b98-9ea0-8dede74ec4e6.png)
 
 ### [상품검색]
-![image](https://user-images.githubusercontent.com/115531869/196035845-8160b785-9239-4059-baf9-b263576be059.png)
+![image](https://user-images.githubusercontent.com/115531869/196036467-b20619d8-de98-4615-abc8-26de3283ffe4.png)
 
 ### [상품주문]
-![image](https://user-images.githubusercontent.com/115531869/196036467-b20619d8-de98-4615-abc8-26de3283ffe4.png)
+![image](https://user-images.githubusercontent.com/115531869/196036789-6154e3ff-4974-4e07-875f-ae4298583467.png)
 
 ### [주문실패]
 ![image](https://user-images.githubusercontent.com/115531869/196035883-c06ee650-3854-4752-9f8b-36e86fa258cf.png)
