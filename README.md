@@ -53,7 +53,7 @@ DB에 연결하여 저장된 매장에 상품을 주문 할 수 있는 프로그
 ![image](https://user-images.githubusercontent.com/115531869/196035803-2f52c138-b1a3-489f-bfb7-fe1b20eab1bd.png)
 
 ### [유저정보]
-![image](https://user-images.githubusercontent.com/115531869/196035820-ac5991e1-8ecf-420d-bb09-d1dcfd73ce45.png)
+![image](https://user-images.githubusercontent.com/115531869/196036355-847ca937-e9f9-4071-a1dd-a1de7a922ca1.png)
 
 ### [정보수정]
 ![image](https://user-images.githubusercontent.com/115531869/196035829-9639edf1-46d4-4b98-9ea0-8dede74ec4e6.png)
@@ -62,7 +62,7 @@ DB에 연결하여 저장된 매장에 상품을 주문 할 수 있는 프로그
 ![image](https://user-images.githubusercontent.com/115531869/196035845-8160b785-9239-4059-baf9-b263576be059.png)
 
 ### [상품주문]
-![image](https://user-images.githubusercontent.com/115531869/196035873-36e8ef2d-d3cd-461e-8799-572fa8e15736.png)
+![image](https://user-images.githubusercontent.com/115531869/196036467-b20619d8-de98-4615-abc8-26de3283ffe4.png)
 
 ### [주문실패]
 ![image](https://user-images.githubusercontent.com/115531869/196035883-c06ee650-3854-4752-9f8b-36e86fa258cf.png)
