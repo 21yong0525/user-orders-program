@@ -29,13 +29,10 @@ DB에 연결하여 저장된 매장에 상품을 주문 할 수 있는 프로그
 ## 모델링
 ![image](https://user-images.githubusercontent.com/115531869/196035718-fa8cf57e-fd49-4f19-9b1c-3d71cc936dd8.png)
 
-
 ## 기능 요약 및 설명
 
 ### [공통기능]
-![image](https://user-images.githubusercontent.com/115531869/196035737-6206e45d-3304-4537-8f86-63edcf184883.png)
-
-
+![image](https://user-images.githubusercontent.com/115531869/196066844-839c94ed-52cb-4714-8c87-f26ae3d11c03.png)
 
 ### [로그인메뉴]
 ![image](https://user-images.githubusercontent.com/115531869/196035756-92fdb504-2168-4aa6-92ff-e09f4eb194fe.png)
