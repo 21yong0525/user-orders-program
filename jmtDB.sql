@@ -45,11 +45,11 @@ productName varchar(10) not null,
 orderamount tinyint unsigned not null,
 	orderaccount int null default 0,
 	date datetime not null,
-   	constraint pk_orderNo primary key(orderNo),
-    constraint fk_orders_users_userid foreign key(userid) references users(userid) on delete cascade,
+	constraint pk_orderNo primary key(orderNo),
+	constraint fk_orders_users_userid foreign key(userid) references users(userid) on delete cascade,
 	constraint fk_orders_stores_storeName foreign key(storeName) references stores(storeName) on update cascade on delete cascade,
-    constraint fk_orders_products_productName foreign key(productName) references products(productName) on update cascade on delete cascade,
-   	index idx_date (date)
+	constraint fk_orders_products_productName foreign key(productName) references products(productName) on update cascade on delete cascade,
+	index idx_date (date)
 );
 
 drop table if exists csService;
