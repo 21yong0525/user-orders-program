@@ -31,9 +31,9 @@ create table if not exists products (-- 상품 테이블
 	productName varchar(10) not null,
 	price mediumint unsigned not null,
 	stock int null default 0,
-constraint pk_no primary key(no),
-constraint uk_productName unique(productName),
-constraint fk_products_stores_storeName foreign key(storeName) references stores(storeName) on delete cascade
+	constraint pk_no primary key(no),
+	constraint uk_productName unique(productName),
+	constraint fk_products_stores_storeName foreign key(storeName) references stores(storeName) on delete cascade
 );
 
 drop table if exists orders;
@@ -58,7 +58,7 @@ create table if not exists csService(-- 고객센터 게시판 테이블
 	userid varchar(10) not null,
 	question text(50) not null,
 	constraint pk_csNo primary key(csNo),	
-constraint fk_csService_users_userid foreign key(userid) references users(userid) on delete cascade
+	constraint fk_csService_users_userid foreign key(userid) references users(userid) on delete cascade
 );
 
 -- [프로시져]
