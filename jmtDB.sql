@@ -5,46 +5,46 @@ use jmtdb;
 
 -- [테이블 생성]
 drop table if exists users;
-create table if not exists users(		-- 유저테이블
-	userid varchar(10) not null,		-- 아이디
-	password varchar(10) null,			-- 비밀번호
-	name varchar(5) not null,			-- 이름
-	phone char(13) not null,  			-- 전화번호
-	int unsigned null default 0, 		-- 충전금액
-	amount int unsigned null default 0,	-- 구매금액
-	grade char(1) null default 'D',		-- 등급
+create table if not exists users(-- 유저테이블
+	userid varchar(10) not null,
+	password varchar(10) null,
+	name varchar(5) not null,
+	phone char(13) not null,
+	int unsigned null default 0,
+	amount int unsigned null default 0,
+	grade char(1) null default 'D',
 	constraint pk_userid primary key (userid)
 );
 
 drop table if exists stores;
-create table if not exists stores(		-- 매장 테이블
-	storeName varchar(10) not null,		-- 이름 (pk)
-	storePhone char(12) not null,		-- 전화번호
+create table if not exists stores(-- 매장 테이블
+	storeName varchar(10) not null,
+	storePhone char(12) not null,
 	constraint pk_storeName primary key (storeName)
 );
 
 
 drop table if exists products;
-create table if not exists products (	-- 상품 테이블
-	no int not null auto_increment,		-- 번호 (pk)
-	storeName varchar(10) not null,		-- 매장 이름 (fk)->(store_storeName)
-	productName varchar(10) not null, 	-- 이름 (uk)
-price mediumint unsigned not null,		-- 가격
-	stock int null default 0,			-- 재고
+create table if not exists products (-- 상품 테이블
+	no int not null auto_increment,
+	storeName varchar(10) not null,
+	productName varchar(10) not null,
+price mediumint unsigned not null,
+	stock int null default 0,
 constraint pk_no primary key(no),
 constraint uk_productName unique(productName),
 constraint fk_products_stores_storeName foreign key(storeName) references stores(storeName) on delete cascade
 );
 
 drop table if exists orders;
-create table if not exists orders(		-- 주문 테이블
-orderNo int not null auto_increment,	-- 주문 번호 (pk)
-userid varchar(10) not null,			-- 유저아이디 (fk)->(users_userid)
-storeName varchar(10) not null,			-- 매장 이름 (fk)->(store_storeName)
-productName varchar(10) not null, 		-- 상품 이름 
-orderamount tinyint unsigned not null,	-- 주문 수량
-	orderaccount int null default 0,	-- 주문 가격
-	date datetime not null,			-- 주문 일시
+create table if not exists orders(-- 주문 테이블
+orderNo int not null auto_increment,
+userid varchar(10) not null,
+storeName varchar(10) not null,
+productName varchar(10) not null,
+orderamount tinyint unsigned not null,
+	orderaccount int null default 0,
+	date datetime not null,
    	constraint pk_orderNo primary key(orderNo),
     	constraint fk_orders_users_userid foreign key(userid) references users(userid) on delete cascade,
 	constraint fk_orders_stores_storeName foreign key(storeName) references stores(storeName) on update cascade on delete cascade,
@@ -53,10 +53,10 @@ orderamount tinyint unsigned not null,	-- 주문 수량
 );
 
 drop table if exists csService;
-create table if not exists csService(	-- 고객센터 게시판 테이블
-	csNo int not null auto_increment,	-- 번호 (pk)
-userid varchar(10) not null,			-- 아이디 (fk)->(users_userid)
-	question text(50) not null,			-- 문의글내용
+create table if not exists csService(-- 고객센터 게시판 테이블
+	csNo int not null auto_increment,
+userid varchar(10) not null,
+	question text(50) not null,
 	constraint pk_csNo primary key(csNo),	
 constraint fk_csService_users_userid foreign key(userid) references users(userid) on delete cascade
 );
@@ -160,7 +160,7 @@ declare productstock int;
 	set totalaccount = (in_orderamount*(select price from products where productname = in_productname));
 	-- 총 상품 가격 계산
 set productstock = (select stock from products where productname = in_productname);
-- 상품 재고 수량과 주문 수량을 비교하여 주문
+-- 상품 재고 수량과 주문 수량을 비교하여 주문
 	if (productstock >= in_orderamount) then
 insert into orders values(0,in_userid,in_storename,in_productname,in_orderamount,totalaccount,now());
 else select '재고가 없어주문이 불가합니다.';
@@ -245,4 +245,3 @@ end $$
 DELIMITER ;
 
 SELECT getOrderFunc('leehanyong');
- 
